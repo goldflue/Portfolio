@@ -63,6 +63,12 @@ ul {
 	 text-transform: uppercase;
 	 line-height: 1em;
 	 padding-top: 40px;
+	 margin-bottom: 0%;
+}
+.profile h3 {
+	font-size: 1.2em;
+	text-align: left;
+	margin-top: 0%;
 }
  @media (max-width: 1200px) {
 	 .profile h1 {
@@ -172,6 +178,7 @@ ul {
 	 font-weight: 300;
 	 margin-top: 100px;
 	 margin-bottom: 100px;
+	 margin-top: 3%;
 }
  @media (max-width: 1200px) {
 	 .profile .contact-presentation {
@@ -345,7 +352,7 @@ ul {
 		 width: 0%;
 	}
 	 to {
-		 width: 90%;
+		 width: 70%;
 	}
 }
  @keyframes skill_3 {
@@ -353,7 +360,7 @@ ul {
 		 width: 0%;
 	}
 	 to {
-		 width: 50%;
+		 width: 70%;
 	}
 }
  @keyframes skill_4 {
@@ -385,7 +392,7 @@ ul {
 		 width: 0%;
 	}
 	 to {
-		 width: 70%;
+		 width: 75%;
 	}
 }
  
