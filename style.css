@@ -88,7 +88,7 @@ ul {
 }
  .profile .picture-resume-wrapper {
 	 width: 40%;
-	 display: block;
+	 display: inline-flex;
 	 float: left;
 }
  @media (max-width: 1200px) {
@@ -291,6 +291,34 @@ ul {
 	 font-size: 1.2em;
 	 margin-bottom: 20px;
 	 font-weight: 400;
+}
+.dont-break-out {
+
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+  
+	-ms-word-break: break-all;
+	/* This is the dangerous one in WebKit, as it breaks things wherever */
+	word-break: break-all;
+	/* Instead use this non-standard one: */
+	word-break: break-word;
+  
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+  
+  }
+
+.section-title {
+	color: #6c9;
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	margin-bottom: 20px;
+	font-weight: 400;
 }
  .section-wrapper .skill-percentage {
 	 margin-bottom: 10px;
