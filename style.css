@@ -47,6 +47,13 @@ ul {
 	 float: left;
 	 color: #9099a0;
 }
+
+img {
+	transition: transform 2s ease-in-out;
+  }
+  img:hover {
+	transform: rotate(720deg);
+  }
  @media (max-width: 850px) {
 	 .profile {
 		 width: 100%;
