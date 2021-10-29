@@ -14,7 +14,7 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="inkdrop" title="VisuTask" thumbnail={thumbVisuTask}>
+          <WorkGridItem id="visutask" title="VisuTask" thumbnail={thumbVisuTask}>
             Freelancer platform
           </WorkGridItem>
         </Section>
