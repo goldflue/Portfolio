@@ -1,11 +1,11 @@
 {
   "name": "danieltheilvalnert_portfolio",
   "version": "1.0.0",
-  "description": "Dette er mit portefølje",
-  "main": "index.js",
+  "description": "Daniel Theil Valnert Portefølje",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
+    "start": "next start",
     "prettier": "prettier -write .",
     "lint": "next lint"
   },
@@ -13,17 +13,19 @@
   "author": "Daniel Theil Valnert",
   "license": "MIT",
   "dependencies": {
-    "@chakra-ui/icons": "^1.0.16",
-    "@chakra-ui/react": "^1.6.10",
-    "@emotion/react": "^11.5.0",
+    "@chakra-ui/icons": "^1.0.15",
+    "@chakra-ui/react": "^1.6.9",
+    "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "framer-motion": "^4.1.17",
     "next": "^11.1.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "three": "^0.133.1"
   },
   "devDependencies": {
-    "eslint": "^8.0.1",
+    "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.2",
     "prettier": "^2.4.1"
   }
