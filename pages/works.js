@@ -1,9 +1,11 @@
-import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
-import thumbVisuTask from '../public/images/works/visutask.jpg'
+import thumbVisuTask from '../public/images/works/visutask_logo.png'
+import thumbEXAKT from '../public/images/works/exakt_logo.png'
+
 
 const Works = () => (
   <Layout title="Works">
@@ -21,8 +23,8 @@ const Works = () => (
         
         
         <Section delay={0.1}>
-          <WorkGridItem id="menkiki" thumbnail={thumbVisuTask} title="EXAKT">
-            Where I currently work as a student worker / 
+          <WorkGridItem id="exakt" thumbnail={thumbEXAKT} title="EXAKT">
+            Where I currently work as a webdev
           </WorkGridItem>
         </Section>
       </SimpleGrid>

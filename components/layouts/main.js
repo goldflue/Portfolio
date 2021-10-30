@@ -2,8 +2,13 @@ import Head from 'next/head'
 import NavBar from '../navbar'
 import { Box, Container } from '@chakra-ui/react'
 import Footer from '../footer'
+import FaceCubeLoader from '../face-cube-loader'
+import dynamic from 'next/dynamic'
 
-
+const LazyVoxelFace = dynamic(() => import('../face-cube'), {
+  ssr: false,
+  loading: () => <FaceCubeLoader /> 
+})
 
 const Main = ({ children, router }) => {
   return (
@@ -20,6 +25,8 @@ const Main = ({ children, router }) => {
       <NavBar path={router.asPath} />
 
       <Container maxW="container.md" pt={14}>
+        <LazyVoxelFace />
+
         {children}
         <Footer />
       </Container>

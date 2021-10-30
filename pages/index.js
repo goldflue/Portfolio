@@ -59,7 +59,7 @@ const Home = () => (
             maxWidth="100px"
             display="inline-block"
             borderRadius="full"
-            src="/images/mig.png"
+            src="/images/cropped.jpg"
             alt="Profile image"
           />
         </Box>

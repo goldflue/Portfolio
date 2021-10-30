@@ -1,4 +1,10 @@
 {
+  "..\\components\\layouts\\main.js -> ../face-cube": {
+    "id": "./components/face-cube.js",
+    "files": [
+      "static/chunks/components_face-cube_js.js"
+    ]
+  },
   "..\\node_modules\\next\\dist\\client\\next-dev.js -> ./dev/noop": {
     "id": "./node_modules/next/dist/client/dev/noop.js",
     "files": [
