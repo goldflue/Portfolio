@@ -24,15 +24,10 @@ const Works = () => (
         
         <Section delay={0.1}>
           <WorkGridItem id="exakt" thumbnail={thumbEXAKT} title="EXAKT">
-            Where I currently work as a webdev
+            Where I currently work as a web developer
           </WorkGridItem>
         </Section>
       </SimpleGrid>
-
-
-      
-
-      
       
     </Container>
   </Layout>

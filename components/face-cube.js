@@ -2,10 +2,9 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { FaceContainer } from './face-cube-loader'
-// import { Physics, useBox, usePlane } from 'use-cannon'
+//import { Physics, useBox, usePlane } from 'use-cannon'
 import { BoxBufferGeometry, MeshLambertMaterial } from 'three'
-
-// import face from '../public/images/cropped.jpg'
+import face from '../public/images/cropped.jpg'
 
 function easeOutCirc(x) {
     return Math.sqrt(1 - Math.pow(x - 1, 4))
@@ -87,26 +86,34 @@ const FaceCube = () => {
       scene.add(gridHelper)
 
       //EXAMPLE
-      // const daniel = new THREE.TextureLoader().load(face);
-   
-      const geometry = new THREE.BoxGeometry( 3, 3, 3 );
-      const material = new THREE.MeshBasicMaterial( { color: 0x808000 } );
-      const cube = new THREE.Mesh( geometry, material );
-      cube.position.setY(5)
-
-      const planeGeo = new THREE.PlaneGeometry(5,5);
-      const planeMaterial = new THREE.MeshBasicMaterial({color: 0xFF0000});
-      const plane = new THREE.Mesh(planeGeo, planeMaterial);
+      const loadManager = new THREE.LoadingManager();
+      const loader = new THREE.TextureLoader();
       
-      //Flip the bottom plane
-      plane.rotateX(-Math.PI / 2);
-
-      scene.add( cube, plane );   
+      const geometry = new THREE.BoxGeometry( 3, 3, 3 );
+      
+      // TODO
+      // https://stackoverflow.com/questions/35540880/three-textureloader-is-not-loading-images-files
+      loader.load(
+        '../public/images/sun.png',
+        function (face) {
+          const material = new THREE.MeshBasicMaterial({map:face})
+          const cube = new THREE.Mesh( geometry, material );
+          cube.position.setY(5)
+        } );      
+        
+        const planeGeo = new THREE.PlaneGeometry(5,5);
+        const planeMaterial = new THREE.MeshBasicMaterial({color: 0xFF0000});
+        const plane = new THREE.Mesh(planeGeo, planeMaterial);
+        
+        //Flip the bottom plane
+        plane.rotateX(-Math.PI / 2);
+        
+        loadManager.onLoad = () => {
+          scene.add(cube, plane);
+        };
+         
 
       //EXAMPLE STOP
-
-
-
 
       let req = null
       let frame = 0
